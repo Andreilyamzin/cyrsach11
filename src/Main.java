@@ -5,9 +5,9 @@ public class Main {
     public static void main(String[] args) {
 
 
-        employees[0] = new Employee("Jon Keks", 1, 12532);
-        employees[1] = new Employee("Kris Lo", 2, 43533);
-        employees[2] = new Employee("Ron Git", 3, 35163);
+        employees[0] = new Employee("Jon ","Myh","Got", 1, 12532);
+        employees[1] = new Employee("Jon 1","Myh 2" , "Got 1" , 2, 43533);
+        employees[2] = new Employee("Jon 2", " Myh 2", "Got 2", 3, 35163);
 
         printEmployee();
         System.out.println(sumSalary());

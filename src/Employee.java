@@ -1,25 +1,35 @@
 public class Employee {
     private static int idCounter;
     private final int id;
-    private String fullName;
+    private String firstName;
+    private String middleName;
+    private String lastName;
     private int department;
     private int salary;
 
-    public Employee(String fullName, int department, int salary){
+    public Employee(String firstName, String middleName, String lastName, int department, int salary) {
         this.id = idCounter++;
-        this.fullName = fullName;
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.lastName = lastName;
         this.department = department;
         this.salary = salary;
-
-
     }
 
     public int getId() {
         return id;
     }
 
-    public String getFullName() {
-        return fullName;
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public String getLastName() {
+        return lastName;
     }
 
     public int getDepartment() {
@@ -29,8 +39,9 @@ public class Employee {
     public int getSalary() {
         return salary;
     }
-
-
+    public String getFullName(){
+        return lastName + " " + firstName + " " + middleName;
+    }
 
     public void setDepartment(int department) {
         this.department = department;
@@ -44,7 +55,9 @@ public class Employee {
     public String toString() {
         return "Employee{" +
                 "id=" + id +
-                ", fullName='" + fullName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", middleName='" + middleName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", department=" + department +
                 ", salary=" + salary +
                 '}';
